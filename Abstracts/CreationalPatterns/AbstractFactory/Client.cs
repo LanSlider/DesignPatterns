@@ -3,6 +3,7 @@
     class Client
     {
         private readonly Factories.AbstractFactory _abstractFactory;
+
         public Client(Factories.AbstractFactory abstractFactory)
         {
             _abstractFactory = abstractFactory;
