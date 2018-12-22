@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Examples\CreationalPatterns\Singleton_Example\Singleton_Example.csproj" />
+  </ItemGroup>
+
 </Project>
