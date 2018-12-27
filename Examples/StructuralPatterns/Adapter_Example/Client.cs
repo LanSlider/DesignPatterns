@@ -10,14 +10,13 @@
         {
             _xmlService = new XMLService();
             _sendService = new SendService();
-            _xmlToStringService = new XmlToStringService();
+            //_xmlToStringService = new XmlToStringService();
         }
 
-        public void SendData()
+        public void SendData(SendService service)
         {
-            var xml = _xmlService.GetXMLData("dfsdf");
-            var xmlStringData = _xmlToStringService.GetStringFromXMl(xml);
-            _sendService.SendDataOnEmail(xmlStringData, "dfaf");
+            service.Request();
+            //service.SendDataOnEmail();
         }
     }
 }

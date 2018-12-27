@@ -2,11 +2,19 @@
 
 namespace Adapter_Example
 {
-    class XmlToStringService
+    class XmlToStringService : SendService
     {
-        public string GetStringFromXMl(XmlDocument xml)
+        private readonly XMLService _xmlService;
+
+        public XmlToStringService(XMLService xmlService)
         {
-            return xml.ToString();
+            _xmlService = xmlService;
+        }
+
+        public override void Request()
+        {
+            var xmlData = _xmlService.GetXMLData("baseurl.com").ToString();
+            base.SendDataOnEmail(xmlData, "email@email.com");
         }
     }
 }

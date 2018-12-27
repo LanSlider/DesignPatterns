@@ -11,9 +11,12 @@ namespace Singleton_Example
 
         public static UserService GetService()
         {
-            if (_userService == null)
+            lock ()
             {
-                _userService = new UserService();
+                if (_userService == null)
+                {
+                    _userService = new UserService();
+                }
             }
 
             return _userService;

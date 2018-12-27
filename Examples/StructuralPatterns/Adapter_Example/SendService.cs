@@ -5,7 +5,12 @@ namespace Adapter_Example
 {
     class SendService
     {
-        public void SendDataOnEmail(string data, string email)
+        public virtual void Request()
+        {
+            this.SendDataOnEmail("", "");
+        }
+
+        public virtual void SendDataOnEmail(string data, string email)
         {
             var from = new MailAddress(email, "Tom");
             var to = new MailAddress(email);
