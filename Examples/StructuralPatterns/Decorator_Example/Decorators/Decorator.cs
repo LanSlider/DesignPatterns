@@ -2,7 +2,7 @@
 
 namespace Decorator_Example.Decorators
 {
-    abstract class Decorator : Pen
+    abstract class Decorator
     {
         private Pen _pen;
 
@@ -11,7 +11,7 @@ namespace Decorator_Example.Decorators
             this._pen = pen;
         }
 
-        public override bool CheckPerformance()
+        public virtual bool CheckPerformance()
         {
             if (_pen != null)
             {
