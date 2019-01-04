@@ -4,7 +4,7 @@ namespace Decorator_Example.Decorators
 {
     class GelPenDecorator : Decorator
     {
-        public bool CheckPerformance()
+        public override bool CheckPerformance()
         {
             var result = base.CheckPerformance();
             Console.WriteLine("Result gel pen is" + result);

@@ -6,7 +6,7 @@ namespace Decorator_Example.Decorators
     {
 
 
-        public bool CheckPerformance()
+        public override bool CheckPerformance()
         {
             var result = base.CheckPerformance();
             Console.WriteLine("Result ballpoint pen is" + result);
